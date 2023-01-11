@@ -1,0 +1,4 @@
+This machine is vulnerable to HTTP request Splitting Via SSRF. it also exploits the /register path 
+which vulnerable to SQLi to change the password of the Admin user. So this scripts creates the request
+to the /api/weather path and then using the endpoint parameter which is vulnerable to SSRF it sends another request(HTTP Request splitting) 
+to the /register path, in this request the password parameter is an SQLi payload that changes the password of the user.
